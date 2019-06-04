@@ -55,35 +55,46 @@ void print_coords(coord pos) {
  * Square an integer.
  * */
 int square(int n) {
-    return 100;
+    return n * n;
 }
 
 /*
  * Square a double.
  * */
 double square(double d) {
-    return 6.25;
+    return d * d;
 }
 
 /*
  * Get the absolute value of a number.
  * */
 int my_abs(int n) {
-    return 10;
+    return abs(n);
 }
 
 /*
  * Sum from 0 to n using a `while` loop.
  * */
 int sum(int n) {
-    return 45;
+    int output = 0 ;
+    int i = 1 ;
+    while (i <= n){
+        output += i;
+        ++i;
+    }
+    return output;
 }
 
 /*
  * Sum from 0 to n using a `for` loop.
  * */
 int sum2(int n) {
-    return 45;
+    int output = 0 ;
+
+    for (int i = 1; i <= n ; i++){
+        output += i;
+    }
+    return output;
 }
 
 /*
@@ -98,4 +109,8 @@ void say(std::string s) {
  * Use a ranged for to pull a string apart into its bits.
  * */
 void pull_apart_string(std::string s) {
+    for (char word : s){
+        cout << word << " ";
+    }
+    
 }
