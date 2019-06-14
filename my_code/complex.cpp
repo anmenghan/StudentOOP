@@ -12,7 +12,6 @@ bool operator== (const Complex& c1, const Complex& c2) {
 }
 
 
-
 ostream& operator<< (ostream& os, const Complex& c) {
     
     /*
@@ -36,9 +35,6 @@ istream& operator>> (istream& is, Complex& c) {
 }
 
 
-
-
-
 Complex::operator bool() const {
     if ((real == 0) || (imag == 0)){
         return true;
@@ -47,7 +43,6 @@ Complex::operator bool() const {
         return false;
     }
 }
-
 
 
 Complex& Complex::operator++() {
@@ -89,7 +84,6 @@ Complex operator-(const Complex& c1, const Complex& c2) {
 double Complex::get_real() const {
     return real;
 }
-
 
 
 double Complex::get_imag() const {
