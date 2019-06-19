@@ -4,7 +4,7 @@
 using namespace std;
 
 void print_vector(const MyVec& v) {
-    for(int i = 1; i<v.size() ; ++i){
+    for(int i = 0; i<v.size() ; ++i){
         cout <<v[i]<<" ";
     }
     cout << endl;
@@ -22,7 +22,7 @@ MyVec::MyVec(const MyVec& v2) {
     sz = v2.sz;
     capacity = v2.capacity;
     data = new int[capacity];
-    for (int i = 1; i<=v2.sz; ++i){
+    for (int i = 0; i<v2.sz; ++i){
         data[i]=v2.data[i];
     }
     
@@ -62,7 +62,7 @@ bool operator==(MyVec& v1, MyVec& v2) {
         return false;
     }
     
-    for(int i = 0; i < v1.size(); i++){
+    for(int i = 0; i < v1.size(); ++i){
         if (v1[i] != v2[i]) {
             return false;
         }
@@ -80,7 +80,7 @@ void MyVec::push_back(int val) {
         capacity *= 2;
         int* new_data = new int[capacity];
         
-        for(int i = 0; i < sz; i ++){
+        for(int i = 0; i < sz; ++i){
             new_data[i] = data[i];
         }
         
